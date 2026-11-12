@@ -1,0 +1,551 @@
+{
+  "metadata": {
+    "name": "Dossier GRC pédagogique — espace documentaire fictif",
+    "version": "1.0.0",
+    "created": "2026-11-12",
+    "educational": true,
+    "fictional": true,
+    "scoring_note": "Convention locale de l'exercice : gravité et vraisemblance de 1 à 4 ; score = gravité × vraisemblance ; 1–3 faible, 4–7 modéré, 8–11 élevé, 12–16 critique. Ces choix ne sont pas une prescription ISO ou EBIOS RM. Les cibles sont des hypothèses, jamais des résultats obtenus.",
+    "scope": "Étude fictive d'un service interne de gestion de dossiers techniques synthétiques : consultation, modification contrôlée et disponibilité. Le dossier structure les cinq ateliers EBIOS RM et une instruction simulée d'homologation. Aucun système métier réel n'est audité.",
+    "exclusions": [
+      "Aucune organisation ou personne réelle ; aucune donnée personnelle, secret ou information classifiée.",
+      "Aucune désignation OIV/SIIV, conformité légale ou certification ISO établie.",
+      "Aucune prestation PASSI qualifiée, labellisation EBIOS RM ou homologation réelle.",
+      "Aucune mesure technique déployée : les documents préparés ne prouvent pas la mise en œuvre ni l'efficacité des contrôles.",
+      "Aucune attaque, connexion à une cible ou collecte réseau exécutée."
+    ]
+  },
+  "business_values": [
+    {
+      "id": "BV-01",
+      "name": "Confidentialité des dossiers techniques synthétiques",
+      "mission": "Limiter la consultation des dossiers de démonstration aux rôles prévus dans le scénario."
+    },
+    {
+      "id": "BV-02",
+      "name": "Intégrité des validations de dossiers",
+      "mission": "Conserver des états de validation cohérents et des décisions traçables dans le scénario."
+    },
+    {
+      "id": "BV-03",
+      "name": "Disponibilité de l'espace documentaire",
+      "mission": "Permettre la consultation des dossiers nécessaires à une activité de démonstration fictive."
+    }
+  ],
+  "supporting_assets": [
+    {
+      "id": "AS-01",
+      "name": "Application documentaire fictive",
+      "business_value_ids": [
+        "BV-01",
+        "BV-02",
+        "BV-03"
+      ]
+    },
+    {
+      "id": "AS-02",
+      "name": "Annuaire et gestion des identités fictifs",
+      "business_value_ids": [
+        "BV-01",
+        "BV-02",
+        "BV-03"
+      ]
+    },
+    {
+      "id": "AS-03",
+      "name": "Stockage documentaire fictif",
+      "business_value_ids": [
+        "BV-01",
+        "BV-02",
+        "BV-03"
+      ]
+    },
+    {
+      "id": "AS-04",
+      "name": "Sauvegardes envisagées dans le scénario",
+      "business_value_ids": [
+        "BV-03"
+      ]
+    },
+    {
+      "id": "AS-05",
+      "name": "Console d'administration fictive",
+      "business_value_ids": [
+        "BV-02",
+        "BV-03"
+      ]
+    },
+    {
+      "id": "AS-06",
+      "name": "Point d'accès de maintenance fournisseur envisagé",
+      "business_value_ids": [
+        "BV-01",
+        "BV-03"
+      ]
+    }
+  ],
+  "feared_events": [
+    {
+      "id": "ER-01",
+      "name": "Divulgation non autorisée des dossiers de démonstration",
+      "business_value_id": "BV-01",
+      "severity": 4,
+      "rationale": "Hypothèse locale : une divulgation étendue compromettrait l'objectif de confidentialité du cas étudié. Aucun dommage réel n'est constaté."
+    },
+    {
+      "id": "ER-02",
+      "name": "Modification abusive des validations",
+      "business_value_id": "BV-02",
+      "severity": 3,
+      "rationale": "Hypothèse locale : des validations falsifiées entraîneraient des décisions incohérentes et une reprise manuelle des dossiers fictifs."
+    },
+    {
+      "id": "ER-03",
+      "name": "Indisponibilité prolongée de l'espace documentaire",
+      "business_value_id": "BV-03",
+      "severity": 4,
+      "rationale": "Hypothèse locale : une interruption de plus de deux jours bloquerait l'activité fictive dépendante de ce service."
+    }
+  ],
+  "baseline_controls": [
+    {
+      "id": "BC-01",
+      "name": "Procédure de gestion des comptes et des accès rédigée",
+      "status": "documented",
+      "evidence_ids": [
+        "EV-PROCEDURES"
+      ]
+    },
+    {
+      "id": "BC-02",
+      "name": "Restriction technique des accès fournisseur à préparer",
+      "status": "planned",
+      "evidence_ids": []
+    },
+    {
+      "id": "BC-03",
+      "name": "Collecte et revue des journaux à concevoir",
+      "status": "planned",
+      "evidence_ids": []
+    },
+    {
+      "id": "BC-04",
+      "name": "Procédure de sauvegarde et restauration rédigée",
+      "status": "documented",
+      "evidence_ids": [
+        "EV-RUNBOOK"
+      ]
+    },
+    {
+      "id": "BC-05",
+      "name": "Support de sensibilisation préparé",
+      "status": "documented",
+      "evidence_ids": [
+        "EV-AWARENESS"
+      ]
+    },
+    {
+      "id": "BC-06",
+      "name": "Procédure de réaction à incident préparée",
+      "status": "documented",
+      "evidence_ids": [
+        "EV-RUNBOOK"
+      ]
+    },
+    {
+      "id": "BC-07",
+      "name": "Cadre de revue des risques et d'instruction du dossier documenté",
+      "status": "documented",
+      "evidence_ids": [
+        "EV-ATELIERS",
+        "EV-HOMO"
+      ]
+    }
+  ],
+  "risk_sources": [
+    {
+      "id": "SR-01",
+      "name": "Acteur cybercriminel fictif visant les dossiers",
+      "motivation": "Tirer un avantage de la divulgation d'informations dans le scénario."
+    },
+    {
+      "id": "SR-02",
+      "name": "Acteur interne malveillant fictif",
+      "motivation": "Modifier volontairement des validations pour masquer un usage abusif."
+    },
+    {
+      "id": "SR-03",
+      "name": "Groupe d'extorsion fictif",
+      "motivation": "Interrompre l'accès aux dossiers afin d'exercer une pression sur l'organisation fictive."
+    }
+  ],
+  "targeted_objectives": [
+    {
+      "id": "OV-01",
+      "name": "Obtenir et divulguer les dossiers synthétiques"
+    },
+    {
+      "id": "OV-02",
+      "name": "Falsifier les états de validation"
+    },
+    {
+      "id": "OV-03",
+      "name": "Rendre le service indisponible"
+    }
+  ],
+  "source_objective_pairs": [
+    {
+      "id": "PAIR-01",
+      "risk_source_id": "SR-01",
+      "targeted_objective_id": "OV-01",
+      "retained": true,
+      "rationale": "La relation de maintenance constitue une hypothèse d'entrée pertinente dans le périmètre fictif."
+    },
+    {
+      "id": "PAIR-02",
+      "risk_source_id": "SR-02",
+      "targeted_objective_id": "OV-02",
+      "retained": true,
+      "rationale": "Des droits administratifs étendus sont supposés ; leur séparation n'est pas mise en œuvre ni démontrée."
+    },
+    {
+      "id": "PAIR-03",
+      "risk_source_id": "SR-03",
+      "targeted_objective_id": "OV-03",
+      "retained": true,
+      "rationale": "La dépendance au service documentaire justifie un scénario volontaire d'interruption."
+    }
+  ],
+  "stakeholders": [
+    {
+      "id": "PP-01",
+      "name": "Fournisseur de maintenance fictif",
+      "exposure": "Accès distant envisagé à AS-06 ; aucune connexion réelle n'existe dans cet exercice."
+    },
+    {
+      "id": "PP-02",
+      "name": "Équipe d'administration fictive",
+      "exposure": "Rôles privilégiés supposés sur AS-02 et AS-05 ; aucun compte réel n'est créé."
+    },
+    {
+      "id": "PP-03",
+      "name": "Équipe d'exploitation et de sauvegarde fictive",
+      "exposure": "Dépendance aux dossiers AS-03 et à la restauration envisagée sur AS-04."
+    }
+  ],
+  "strategic_scenarios": [
+    {
+      "id": "SS-01",
+      "name": "Atteinte à la confidentialité via la relation fournisseur",
+      "pair_id": "PAIR-01",
+      "stakeholder_ids": [
+        "PP-01"
+      ],
+      "feared_event_id": "ER-01",
+      "path": [
+        "Une source de risque vise une relation de maintenance supposée moins maîtrisée.",
+        "Elle utilise cette relation comme voie d'accès de haut niveau au service fictif.",
+        "La confidentialité des dossiers est compromise dans l'hypothèse étudiée."
+      ]
+    },
+    {
+      "id": "SS-02",
+      "name": "Abus de privilèges sur les validations",
+      "pair_id": "PAIR-02",
+      "stakeholder_ids": [
+        "PP-02"
+      ],
+      "feared_event_id": "ER-02",
+      "path": [
+        "Un acteur interne dispose de droits supposés trop larges.",
+        "L'absence de séparation démontrée facilite une modification des états.",
+        "La fiabilité des validations fictives est affectée."
+      ]
+    },
+    {
+      "id": "SS-03",
+      "name": "Interruption volontaire de la chaîne documentaire",
+      "pair_id": "PAIR-03",
+      "stakeholder_ids": [
+        "PP-03"
+      ],
+      "feared_event_id": "ER-03",
+      "path": [
+        "Une source de risque vise la dépendance à l'espace documentaire.",
+        "Une atteinte au stockage interrompt l'accès au service.",
+        "La reprise n'est pas démontrée dans le dossier initial."
+      ]
+    }
+  ],
+  "operational_scenarios": [
+    {
+      "id": "SO-01",
+      "name": "Usage non autorisé d'un accès de maintenance supposé",
+      "strategic_scenario_id": "SS-01",
+      "asset_ids": [
+        "AS-06",
+        "AS-02",
+        "AS-01",
+        "AS-03"
+      ],
+      "steps": [
+        "Supposer la compromission d'un accès de maintenance fictif ; aucune tentative n'est réalisée.",
+        "Supposer qu'un accès trop large permet une consultation non prévue.",
+        "Décrire une divulgation hypothétique sans manipuler de véritables fichiers sensibles."
+      ],
+      "likelihood": 3,
+      "rationale": "Choix d'exercice : l'exposition fournisseur est supposée significative, tandis qu'aucune restriction technique n'est prouvée."
+    },
+    {
+      "id": "SO-02",
+      "name": "Modification volontaire par un rôle privilégié fictif",
+      "strategic_scenario_id": "SS-02",
+      "asset_ids": [
+        "AS-02",
+        "AS-05",
+        "AS-03"
+      ],
+      "steps": [
+        "Supposer qu'un rôle d'administration dispose de droits de modification non séparés.",
+        "Décrire une modification abusive des états de validation.",
+        "Constater que la procédure proposée ne constitue pas une preuve d'un contrôle bloquant."
+      ],
+      "likelihood": 3,
+      "rationale": "Choix d'exercice : les droits sont supposés étendus ; aucun mécanisme technique de double validation n'est démontré."
+    },
+    {
+      "id": "SO-03",
+      "name": "Rançongiciel hypothétique et restauration non démontrée",
+      "strategic_scenario_id": "SS-03",
+      "asset_ids": [
+        "AS-01",
+        "AS-03",
+        "AS-04"
+      ],
+      "steps": [
+        "Supposer une altération malveillante du stockage documentaire sans exécuter de code offensif.",
+        "Décrire la perte d'accès aux dossiers et ses effets sur l'activité fictive.",
+        "Examiner les prérequis d'une restauration, sans prétendre qu'un exercice de reprise a été réalisé."
+      ],
+      "likelihood": 3,
+      "rationale": "Choix d'exercice : la chaîne de restauration est seulement documentée, sans sauvegarde ni restauration technique exécutée."
+    }
+  ],
+  "risks": [
+    {
+      "id": "R-01",
+      "name": "Divulgation de dossiers via un accès fournisseur",
+      "operational_scenario_id": "SO-01",
+      "initial_severity": 4,
+      "initial_likelihood": 3,
+      "current_severity": 4,
+      "current_likelihood": 3,
+      "target_severity": 4,
+      "target_likelihood": 1,
+      "rationale": "La gravité reprend ER-01 et la vraisemblance SO-01 ; score initial 12 selon la convention locale.",
+      "current_rationale": "Aucune action technique n'est mise en œuvre. La rédaction de procédures ne réduit pas le risque courant, qui reste égal à l'initial.",
+      "target_rationale": "Cible hypothétique après restrictions d'accès, revue et contrôles démontrés. La vraisemblance cible 1 devra être réévaluée à partir de preuves ; elle n'est pas obtenue.",
+      "action_ids": [
+        "ACT-01",
+        "ACT-02",
+        "ACT-03",
+        "ACT-06",
+        "ACT-07"
+      ],
+      "status": "open",
+      "acceptance": null
+    },
+    {
+      "id": "R-02",
+      "name": "Falsification des validations par abus de privilèges",
+      "operational_scenario_id": "SO-02",
+      "initial_severity": 3,
+      "initial_likelihood": 3,
+      "current_severity": 3,
+      "current_likelihood": 3,
+      "target_severity": 3,
+      "target_likelihood": 2,
+      "rationale": "La gravité reprend ER-02 et la vraisemblance SO-02 ; score initial 9 selon la convention locale.",
+      "current_rationale": "Les principes de séparation sont rédigés seulement ; aucune restriction technique ni revue indépendante n'est prouvée. Le risque courant ne baisse pas.",
+      "target_rationale": "Objectif indicatif sous réserve de séparation des rôles, contrôles et revue effective. Il ne constitue ni résultat mesuré ni acceptation.",
+      "action_ids": [
+        "ACT-01",
+        "ACT-03",
+        "ACT-05",
+        "ACT-06",
+        "ACT-07"
+      ],
+      "status": "open",
+      "acceptance": null
+    },
+    {
+      "id": "R-03",
+      "name": "Interruption documentaire et absence de reprise démontrée",
+      "operational_scenario_id": "SO-03",
+      "initial_severity": 4,
+      "initial_likelihood": 3,
+      "current_severity": 4,
+      "current_likelihood": 3,
+      "target_severity": 4,
+      "target_likelihood": 2,
+      "rationale": "La gravité reprend ER-03 et la vraisemblance SO-03 ; score initial 12 selon la convention locale.",
+      "current_rationale": "Le runbook n'est pas un test de sauvegarde ou de restauration. Aucune capacité de reprise technique n'est démontrée ; le courant reste égal à l'initial.",
+      "target_rationale": "Hypothèse de diminution de vraisemblance après contrôles de sauvegarde, restauration et réponse à incident effectivement vérifiés ; objectif non atteint.",
+      "action_ids": [
+        "ACT-03",
+        "ACT-04",
+        "ACT-06",
+        "ACT-07"
+      ],
+      "status": "open",
+      "acceptance": null
+    }
+  ],
+  "treatment_actions": [
+    {
+      "id": "ACT-01",
+      "name": "Documenter la gestion des comptes et les revues d'accès",
+      "risk_ids": [
+        "R-01",
+        "R-02"
+      ],
+      "owner": "Responsable des identités fictif",
+      "due_date": "2026-12-04",
+      "status": "documented",
+      "evidence_ids": [
+        "EV-PROCEDURES"
+      ]
+    },
+    {
+      "id": "ACT-02",
+      "name": "Préparer le cadrage des accès fournisseur",
+      "risk_ids": [
+        "R-01"
+      ],
+      "owner": "Responsable des prestataires fictif",
+      "due_date": "2026-12-08",
+      "status": "documented",
+      "evidence_ids": [
+        "EV-PROCEDURES"
+      ]
+    },
+    {
+      "id": "ACT-03",
+      "name": "Planifier la collecte et la revue technique des journaux",
+      "risk_ids": [
+        "R-01",
+        "R-02",
+        "R-03"
+      ],
+      "owner": "Responsable exploitation fictif",
+      "due_date": "2026-12-11",
+      "status": "planned",
+      "evidence_ids": []
+    },
+    {
+      "id": "ACT-04",
+      "name": "Rédiger les prérequis et le runbook de restauration",
+      "risk_ids": [
+        "R-03"
+      ],
+      "owner": "Responsable sauvegarde fictif",
+      "due_date": "2026-12-15",
+      "status": "documented",
+      "evidence_ids": [
+        "EV-RUNBOOK"
+      ]
+    },
+    {
+      "id": "ACT-05",
+      "name": "Documenter la séparation des rôles et la double validation",
+      "risk_ids": [
+        "R-02"
+      ],
+      "owner": "Responsable métier fictif",
+      "due_date": "2026-12-09",
+      "status": "documented",
+      "evidence_ids": [
+        "EV-PROCEDURES"
+      ]
+    },
+    {
+      "id": "ACT-06",
+      "name": "Préparer une sensibilisation aux accès et aux incidents",
+      "risk_ids": [
+        "R-01",
+        "R-02",
+        "R-03"
+      ],
+      "owner": "Référent sensibilisation fictif",
+      "due_date": "2026-12-16",
+      "status": "documented",
+      "evidence_ids": [
+        "EV-AWARENESS"
+      ]
+    },
+    {
+      "id": "ACT-07",
+      "name": "Planifier la revue indépendante et l'instruction du dossier",
+      "risk_ids": [
+        "R-01",
+        "R-02",
+        "R-03"
+      ],
+      "owner": "Pilote GRC fictif",
+      "due_date": "2026-12-18",
+      "status": "planned",
+      "evidence_ids": [
+        "EV-AUDIT",
+        "EV-HOMO"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-ATELIERS",
+      "path": "docs/ateliers-ebios-rm.md",
+      "description": "Compte rendu pédagogique des cinq ateliers et traçabilité des identifiants ; aucune réunion réelle revendiquée."
+    },
+    {
+      "id": "EV-PROCEDURES",
+      "path": "docs/procedures-securite.md",
+      "description": "Procédures préparées pour les accès, fournisseurs et validations ; aucun contrôle technique déployé."
+    },
+    {
+      "id": "EV-RUNBOOK",
+      "path": "docs/runbook-incidents-restauration.md",
+      "description": "Runbook préparé ; aucune intervention ou restauration exécutée."
+    },
+    {
+      "id": "EV-AWARENESS",
+      "path": "docs/sensibilisation.md",
+      "description": "Support et exercices de sensibilisation rédigés ; aucune session dispensée."
+    },
+    {
+      "id": "EV-AUDIT",
+      "path": "docs/preparation-audit-passi.md",
+      "description": "Plan de revue documentaire et contexte PASSI ; aucun audit qualifié réalisé."
+    },
+    {
+      "id": "EV-CONTEXT",
+      "path": "docs/cadre-reglementaire.md",
+      "description": "Étude de périmètre ISO/PASSI/LPM ; aucune applicabilité réglementaire déclarée."
+    },
+    {
+      "id": "EV-HOMO",
+      "path": "docs/dossier-homologation-simule.md",
+      "description": "Dossier d'instruction et proposition de décision non signée ; aucune homologation."
+    },
+    {
+      "id": "EV-SOURCES",
+      "path": "docs/sources-officielles.md",
+      "description": "Sept références publiques primaires, reformulées et sans reproduction des normes ISO."
+    },
+    {
+      "id": "EV-REVIEW",
+      "path": "evidence/document-review.md",
+      "description": "Revue documentaire de cohérence de ce jeu de données ; pas une revue indépendante de sécurité."
+    }
+  ]
+}
+

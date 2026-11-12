@@ -1,0 +1,25 @@
+Local validation record — 2026-11-12
+
+Command: python -m unittest discover -s tests -v
+Runtime: Python 3.12, Windows
+
+Ran 36 tests in 0.771s
+Result: OK
+Passed: 34
+Skipped: 2
+Failures: 0
+Errors: 0
+
+Both skipped tests exercise symlink creation. The Windows account did not permit creating symlinks, so unittest reported:
+- test_evidence_symlink_cannot_escape_or_alias_local_file — skipped: Symlink creation is unavailable to this account
+- test_parent_directory_symlink_is_rejected — skipped: Symlink creation is unavailable to this account
+
+The corresponding validator checks remain implemented. A future CI execution on Linux is expected to exercise them; this file does not claim that remote CI has passed.
+
+Additional commands executed successfully:
+- python app.py validate — valid dataset with 3 fictional risks and 7 actions
+- python app.py report — deterministic JSON and Markdown reports created
+
+Scope: standard-library validator and fictitious data only. No network target, security scan, control deployment, certification, audit or authorisation was tested.
+
+

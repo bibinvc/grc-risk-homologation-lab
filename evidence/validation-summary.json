@@ -1,0 +1,39 @@
+{
+  "prepared_local_date": "2026-11-12",
+  "status": "passed_with_environment_skips",
+  "runtime": {
+    "operating_system": "Windows",
+    "python": "3.12"
+  },
+  "unit_tests": {
+    "run": 36,
+    "passed": 34,
+    "skipped": 2,
+    "failures": 0,
+    "errors": 0,
+    "skip_reason": "The account could not create symlinks; two containment tests were skipped locally."
+  },
+  "scenario": {
+    "fictional": true,
+    "risks": 3,
+    "open_risks": 3,
+    "treatment_actions": 7,
+    "documented_actions": 5,
+    "planned_actions": 2,
+    "implemented_actions": 0,
+    "simulated_acceptances": 0
+  },
+  "commands": {
+    "validate": "passed",
+    "report": "passed"
+  },
+  "remote_ci_executed_at_record_time": false,
+  "claims_excluded": [
+    "PASSI-qualified audit",
+    "ISO conformity or certification",
+    "LPM applicability or compliance",
+    "real security authorisation",
+    "control effectiveness in a real information system"
+  ]
+}
+
