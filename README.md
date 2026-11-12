@@ -61,5 +61,5 @@ Ces contrôles assurent la cohérence du dossier. Une empreinte ne prouve ni la 
 - L'acceptation est simulée et l'autorité fictive n'a signé aucune décision.
 - Avant toute utilisation professionnelle : revoir le contexte avec les métiers, les menaces, les mesures effectivement en place, les preuves et les obligations applicables ; faire valider le dossier par les personnes habilitées.
 
-Les références primaires et la date de consultation figurent dans `docs/references.md`. Le contrat de données est décrit dans [SPEC.md](SPEC.md). Les résultats de vérification locaux seront consignés dans `evidence/` ; la présence d'un fichier de configuration CI ne suffit pas à prouver une exécution distante.
+Les références primaires et la date de consultation figurent dans `docs/sources-officielles.md`. Le contrat de données est décrit dans [SPEC.md](SPEC.md). Les résultats de vérification locaux sont consignés dans `evidence/` ; la présence d'un fichier de configuration CI ne suffit pas à prouver une exécution distante.
 
