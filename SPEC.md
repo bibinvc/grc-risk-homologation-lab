@@ -1,6 +1,6 @@
 # Contrat de données — version 1
 
-Projet pédagogique assisté par IA, créé le 12 novembre 2026. Toutes les organisations, personnes et situations sont fictives. Aucun audit qualifié, conformité certifiée ou décision réelle d'homologation.
+Projet pédagogique, créé le 12 novembre 2026. Toutes les organisations, personnes et situations sont fictives. Aucun audit qualifié, conformité certifiée ou décision réelle d'homologation.
 
 Le fichier `data/scenario.json` est un objet contenant :
 

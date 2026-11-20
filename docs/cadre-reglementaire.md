@@ -2,7 +2,7 @@
 
 Version 1.0 — 12 novembre 2026 — EV-CONTEXT.
 
-Étude documentaire pédagogique assistée par IA, fondée sur les sept sources publiques recensées dans [les références](sources-officielles.md). Elle ne constitue ni une consultation juridique, ni une évaluation de conformité, ni une certification. L'organisation et le service étudiés sont entièrement fictifs.
+Étude documentaire pédagogique, fondée sur les sept sources publiques recensées dans [les références](sources-officielles.md). Elle ne constitue ni une consultation juridique, ni une évaluation de conformité, ni une certification. L'organisation et le service étudiés sont entièrement fictifs.
 
 ## ISO/IEC 27001 et ISO/IEC 27005
 

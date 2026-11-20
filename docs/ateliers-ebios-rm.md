@@ -2,7 +2,7 @@
 
 Version 1.0 — 12 novembre 2026 — preuve documentaire EV-ATELIERS.
 
-Ce document est un travail pédagogique assisté par IA sur un système entièrement fictif. Les « ateliers » désignent ici les étapes d'une étude rédigée : aucune réunion, consultation d'expert, collecte de terrain ou intervention technique réelle n'est revendiquée. La source méthodologique publique est l'[ANSSI](https://cyber.gouv.fr/securisation/analyse-des-risques/methode-ebios-rm/) ; le jeu de données ne constitue ni un outil labellisé ni une validation officielle de son application.
+Ce document est un travail pédagogique sur un système entièrement fictif. Les « ateliers » désignent ici les étapes d'une étude rédigée : aucune réunion, consultation d'expert, collecte de terrain ou intervention technique réelle n'est revendiquée. La source méthodologique publique est l'[ANSSI](https://cyber.gouv.fr/securisation/analyse-des-risques/methode-ebios-rm/) ; le jeu de données ne constitue ni un outil labellisé ni une validation officielle de son application.
 
 ## Atelier 1 — Cadrage et socle de sécurité
 

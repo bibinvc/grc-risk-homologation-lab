@@ -1,6 +1,6 @@
 # Laboratoire GRC : risques et dossier d'homologation simulée
 
-**Projet personnel pédagogique assisté par IA, créé le 12 novembre 2026. Données entièrement fictives.**
+**Projet personnel pédagogique, créé le 12 novembre 2026. Données entièrement fictives.**
 
 Ce dépôt contient un cas d'étude documenté, un registre de risques et un outil Python de contrôle de cohérence. Il relie les cinq ateliers EBIOS Risk Manager à un plan de traitement, des procédures de sécurité, une préparation d'audit et un dossier d'instruction d'homologation simulée. L'objectif est d'apprendre à rendre une analyse traçable et à justifier les décisions, pas de simplement associer des mots-clés à une matrice.
 
